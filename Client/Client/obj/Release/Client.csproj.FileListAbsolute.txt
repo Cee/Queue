@@ -1,8 +1,0 @@
-c:\users\cee\documents\visual studio 2013\Projects\Client\Client\bin\Release\Client.exe.config
-c:\users\cee\documents\visual studio 2013\Projects\Client\Client\bin\Release\Client.exe
-c:\users\cee\documents\visual studio 2013\Projects\Client\Client\bin\Release\Client.pdb
-c:\users\cee\documents\visual studio 2013\Projects\Client\Client\obj\Release\Client.Form1.resources
-c:\users\cee\documents\visual studio 2013\Projects\Client\Client\obj\Release\Client.Properties.Resources.resources
-c:\users\cee\documents\visual studio 2013\Projects\Client\Client\obj\Release\Client.csproj.GenerateResource.Cache
-c:\users\cee\documents\visual studio 2013\Projects\Client\Client\obj\Release\Client.exe
-c:\users\cee\documents\visual studio 2013\Projects\Client\Client\obj\Release\Client.pdb
