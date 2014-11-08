@@ -1,0 +1,13 @@
+c:\users\cee\documents\visual studio 2013\Projects\Server\Server\bin\Debug\Server.exe.config
+c:\users\cee\documents\visual studio 2013\Projects\Server\Server\bin\Debug\Server.exe
+c:\users\cee\documents\visual studio 2013\Projects\Server\Server\bin\Debug\Server.pdb
+c:\users\cee\documents\visual studio 2013\Projects\Server\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+c:\users\cee\documents\visual studio 2013\Projects\Server\Server\obj\Debug\Server.Form1.resources
+c:\users\cee\documents\visual studio 2013\Projects\Server\Server\obj\Debug\Server.Properties.Resources.resources
+c:\users\cee\documents\visual studio 2013\Projects\Server\Server\obj\Debug\Server.csproj.GenerateResource.Cache
+c:\users\cee\documents\visual studio 2013\Projects\Server\Server\obj\Debug\Server.exe
+c:\users\cee\documents\visual studio 2013\Projects\Server\Server\obj\Debug\Server.pdb
+C:\Users\Cee\Documents\visual studio 2013\Projects\Server\Server\bin\Debug\Server.exe.manifest
+C:\Users\Cee\Documents\visual studio 2013\Projects\Server\Server\bin\Debug\Server.application
+C:\Users\Cee\Documents\visual studio 2013\Projects\Server\Server\obj\Debug\Server.exe.manifest
+C:\Users\Cee\Documents\visual studio 2013\Projects\Server\Server\obj\Debug\Server.application
