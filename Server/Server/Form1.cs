@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Net.Sockets;
 using System.Net;
 using System.Threading;
+using System.Diagnostics;
 
 namespace Server
 {
@@ -23,6 +24,7 @@ namespace Server
         private static int count = 0;
         private static int client = 0;
         private List<Socket> socketList = new List<Socket>();
+        private List<Thread> threadList = new List<Thread>();
 
         private delegate void EventHandle(string str, string str2);
 
@@ -34,7 +36,9 @@ namespace Server
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             EndServer();
-            Application.Exit();
+            Thread.CurrentThread.Abort();
+            System.Environment.Exit(0);
+            Process.GetCurrentProcess().Kill();
         }
         private void startButton_Click(object sender, EventArgs e)
         {
@@ -68,6 +72,7 @@ namespace Server
                 serverSocket.Bind(new IPEndPoint(ip, port));
                 serverSocket.Listen(1);
                 myThread = new Thread(ListenClientConnect);
+                Thread.CurrentThread.IsBackground = true;
                 myThread.Start();
                 this.consoleTextBox.Text += "服务器开始工作 监听端口为23333\n";
                 isRunning = true;
@@ -83,10 +88,12 @@ namespace Server
             while (true)
             {
                 Socket clientSocket = serverSocket.Accept();
+                socketList.Add(clientSocket);
                 client++;
                 clientSocket.Send(Encoding.ASCII.GetBytes(client.ToString()));
                 Invoke(new EventHandle(UpdateLinkStatus), clientSocket.RemoteEndPoint.ToString(), client.ToString());
                 Thread receiveThread = new Thread(SendNumber);
+                threadList.Add(receiveThread);
                 receiveThread.Start(clientSocket);
             }
         }
@@ -144,10 +151,17 @@ namespace Server
                         Console.WriteLine(ex.Message);
                     }
                 }
-                
-
+            }
+            for (int i = 0; i < threadList.Count; i++)
+            {
+                Thread t = threadList[i];
+                if (t != null)
+                {
+                    t.Abort();
+                }
             }
             socketList.Clear();
+            threadList.Clear();
             serverSocket.Close();
             myThread.Abort();
             client = 0;
